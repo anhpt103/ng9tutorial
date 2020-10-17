@@ -1,0 +1,13 @@
+<p>Danh sách tài khoản</p>
+<hr/>
+
+<div *ngFor="let user of users; index as idx">
+    <h3>
+        <a [title]="'ID user: ' + user.id">
+            {{idx + 1}}. {{user.first_name}} {{user.last_name}}
+        </a>
+    </h3>
+    <p *ngIf="user.email">
+        Email: {{user.email}}
+    </p>
+</div>
